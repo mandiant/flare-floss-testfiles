@@ -1,0 +1,31 @@
+Test Name: test-decode-to-heap
+Test Purpose: Demonstrate extraction of strings decoded to a newly allocated heap buffer.
+Decoding algorithm: single byte xor
+Input buffer location: stack
+Output buffer location: heap
+
+Decoded strings:
+    - hello world
+
+Source files:
+    - test-decode-to-heap.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-to-heap
+    Windows:
+        32bit: bin/test-decode-to-heap.exe
+        64bit: bin/test-decode-to-heap64.exe
+
+Build instructions (Windows): |
+    cl.exe test-decode-to-heap.c /Febin/test-decode-to-heap.exe
+
+Build instructions (Linux): |
+    clang test-decode-to-heap.c -o bin/test-decode-to-heap
+
+Build instructions (Cross compile for Windows on Linux): |
+    i686-w64-mingw32-clang test-decode-to-heap.c -o bin/test-decode-to-heap.exe
+
+Xfail:
+    - Linux-32bit
+

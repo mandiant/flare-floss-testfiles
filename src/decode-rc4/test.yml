@@ -1,0 +1,31 @@
+Test Name: test-decode-rc4
+Test Purpose: demonstrate detection and decoding of RC4 encrypted strings.
+Decoding algorithm: RC4
+Input buffer location: stack
+Output buffer location: stack
+
+Decoded strings:
+    - Hello world
+
+Source files:
+    - test-decode-rc4.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-rc4
+    Windows:
+        32bit: bin/test-decode-rc4.exe
+        64bit: bin/test-decode-rc464.exe
+
+Build instructions (Windows): |
+    cl.exe test-decode-rc4.c /Febin/test-decode-rc4.exe
+
+Build instructions (Linux): |
+    clang test-decode-rc4.c -o bin/test-decode-rc4
+
+Build instructions (Cross compile for Windows on Linux): |
+    i686-w64-mingw32-clang test-decode-rc4.c -o bin/test-decode-rc4.exe
+
+Xfail:
+    - Linux-32bit
+

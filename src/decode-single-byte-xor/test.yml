@@ -1,0 +1,31 @@
+Test Name: test-decode-single-byte-xor
+Test Purpose: Demonstrate decoding of a single byte xor routine.
+Decoding algorithm: single byte xor
+Input buffer location: stack
+Output buffer location: stack
+
+Decoded strings:
+    - hello world
+
+Source files:
+    - test-decode-single-byte-xor.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-single-byte-xor
+    Windows:
+        32bit: bin/test-decode-single-byte-xor.exe
+        64bit: bin/test-decode-single-byte-xor64.exe
+
+Build instructions (Windows): |
+    cl.exe test-decode-single-byte-xor.c /Febin/test-decode-single-byte-xor.exe
+
+Build instructions (Linux): |
+    clang test-decode-single-byte-xor.c -o bin/test-decode-single-byte-xor
+
+Build instructions (Cross compile for Windows on Linux): |
+    i686-w64-mingw32-clang test-decode-single-byte-xor.c -o bin/test-decode-single-byte-xor.exe
+
+Xfail:
+    - Linux-32bit
+

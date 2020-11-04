@@ -1,0 +1,31 @@
+Test Name: test-decode-to-global
+Test Purpose: Demonstrate extraction of strings decoded to a global buffer.
+Decoding algorithm: single byte xor
+Input buffer location: global
+Output buffer location: global
+
+Decoded strings:
+    - hello world
+
+Source files:
+    - test-decode-to-global.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-to-global
+    Windows:
+        32bit: bin/test-decode-to-global.exe
+        64bit: bin/test-decode-to-global64.exe
+
+Build instructions (Windows): |
+    cl.exe test-decode-to-global.c /Febin/test-decode-to-global.exe
+
+Build instructions (Linux): |
+    clang test-decode-to-global.c -o bin/test-decode-to-global
+
+Build instructions (Cross compile for Windows on Linux): |
+    i686-w64-mingw32-clang test-decode-to-global.c -o bin/test-decode-to-global.exe
+
+Xfail:
+    - Linux-32bit
+

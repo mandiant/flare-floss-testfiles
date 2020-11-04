@@ -1,0 +1,30 @@
+Test Name: test-decode-stackstrings-move-to-global
+Test Purpose: Demonstrate extraction of local stackstrings loaded into global memory and used later in the program.
+Decoding algorithm: stackstrings moved into global memory
+Input buffer location: n/a
+Output buffer location: global memory
+
+Decoded strings:
+    - loaded world!
+
+Source files:
+    - test-decode-stackstrings-move-to-global.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-stackstrings-move-to-global
+    Windows:
+        32bit: bin/test-decode-stackstrings-move-to-global.exe
+        64bit: bin/test-decode-stackstrings-move-to-global.exe
+
+Build instructions (Windows): |
+    cl.exe test-decode-stackstrings-move-to-global.c /Febin/test-decode-stackstrings-move-to-global.exe
+
+Build instructions (Linux): |
+    clang test-decode-stackstrings-move-to-global.c -o bin/test-decode-stackstrings-move-to-global
+
+Build instructions (Cross compile for Windows on Linux): |
+    i686-w64-mingw32-clang++ test-decode-stackstrings-move-to-global.c -o bin/test-decode-stackstrings-move-to-global.exe
+
+Xfail:
+    - Linux-32bit

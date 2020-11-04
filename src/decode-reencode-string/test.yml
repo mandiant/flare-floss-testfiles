@@ -1,0 +1,33 @@
+Test Name: test-decode-reencode-string
+Test Purpose: demonstrate detection and extraction of strings re-encoded after use.
+Decoding algorithm: single byte xor
+Input buffer location: stack
+Output buffer location: stack
+
+Decoded strings:
+    - hello world
+
+Source files:
+    - test-decode-reencode-string.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-reencode-string
+    Windows:
+        32bit: bin/test-decode-reencode-string.exe
+        64bit: bin/test-decode-reencode-string64.exe
+
+Build instructions (Windows): |
+    rm test-decode-reencode-string.exe
+    cl.exe test-decode-reencode-string.c /Febin/test-decode-reencode-string.exe
+
+Build instructions (Linux): |
+    rm test-decode-reencode-string
+    clang test-decode-reencode-string.c -o bin/test-decode-reencode-string
+
+Build instructions (Cross compile for Windows on Linux): |
+    rm test-decode-reencode-string.exe
+    i686-w64-mingw32-clang test-decode-reencode-string.c -o bin/test-decode-reencode-string.exe
+
+Xfail:
+    - Linux-32bit

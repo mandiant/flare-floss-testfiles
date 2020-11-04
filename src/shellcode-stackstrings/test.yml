@@ -1,0 +1,21 @@
+Test Name: shellcode-stackstrings
+Test Purpose: real world shellcode sample using stackstrings
+Added on: '2016-10-29 19:57:33'
+Test shellcode: 'True'
+Decoded strings:
+- '%d/%02d/%02d %02d:%02d:%02d'  # ----------- stackstrings
+- Result is empty!
+- Checksum error!
+- Incompatible module received!
+- Invalid parameter!
+- Failed to load module!
+- Activation is required!
+- Module is not found!
+- Invalid data received!
+Output Files:
+  Windows:
+    x86: bin/shellcode-stackstrings.bin
+Decoding routines:
+  Windows:
+    x86: ''
+FLOSS running time: 0.463015 seconds

@@ -1,0 +1,35 @@
+Test Name: test-decode-wrapped-decoder
+Test Purpose:  demonstrate detection and decoding of strings deobfuscated by routines with trivial wrappers.
+Decoding algorithm: single byte xor
+Input buffer location: stack
+Output buffer location: stack
+
+Decoded strings:
+    - hello world
+
+Source files:
+    - test-decode-wrapped-decoder.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-wrapped-decoder
+    Windows:
+        32bit: bin/test-decode-wrapped-decoder.exe
+        64bit: bin/test-decode-wrapped-decoder64.exe
+
+Build instructions (Windows): |
+    rm test-decode-wrapped-decoder.exe
+    cl.exe test-decode-wrapped-decoder.c /Febin/test-decode-wrapped-decoder.exe
+
+Build instructions (Linux): |
+    rm test-decode-wrapped-decoder
+    clang test-decode-wrapped-decoder.c -o bin/test-decode-wrapped-decoder
+
+Build instructions (Cross compile for Windows on Linux): |
+    rm test-decode-wrapped-decoder.exe
+    i686-w64-mingw32-clang test-decode-wrapped-decoder.c -o bin/test-decode-wrapped-decoder.exe
+
+Xfail:
+    - all
+    - Linux-32bit
+

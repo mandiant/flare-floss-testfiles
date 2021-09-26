@@ -1,7 +1,7 @@
 Test Name: shellcode-stackstrings
 Test Purpose: real world shellcode sample using stackstrings
 Added on: '2016-10-29 19:57:33'
-Test shellcode: 'True'
+Shellcode Architecture: 'i386'
 Decoded strings:
 - '%d/%02d/%02d %02d:%02d:%02d'  # ----------- stackstrings
 - Result is empty!

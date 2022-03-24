@@ -1,0 +1,32 @@
+Test Name: test-decode-tightstring
+Test Purpose: test tightstring decoding
+Decoding algorithm: obfuscated bytes on the stack, decoded in a tight loop
+Input buffer location: stack
+Output buffer location: stack
+
+Decoded strings:
+    - hello world
+    - goodbye world
+
+Source files:
+    - test-decode-tightstring.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-tightstring
+    Windows:
+        32bit: bin/test-decode-tightstring.exe
+        64bit: bin/test-decode-tightstring64.exe
+
+Build instructions (Windows): |
+    cl.exe test-decode-tightstring.c /Febin/test-decode-tightstring.exe
+
+Build instructions (Linux): |
+    clang test-decode-tightstring.c -o bin/test-decode-tightstring
+
+Build instructions (Cross compile for Windows on Linux): |
+    i686-w64-mingw32-clang test-decode-tightstring.c -o bin/test-decode-tightstring.exe
+
+Xfail:
+    - Linux-32bit
+

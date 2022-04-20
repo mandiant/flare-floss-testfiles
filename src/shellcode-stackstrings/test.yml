@@ -8,7 +8,7 @@ Decoded strings:
 - Checksum error!
 - Incompatible module received!
 - Invalid parameter!
-- Failed to load module!
+- Failed to init module!
 - Activation is required!
 - Module is not found!
 - Invalid data received!

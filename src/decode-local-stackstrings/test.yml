@@ -5,7 +5,7 @@ Input buffer location: n/a
 Output buffer location: stack
 
 Decoded strings:
-    - hello world
+    # - hello world; shows up as regular string of the binary and is referenced by the function
     - goodbye world
 
 Source files:
@@ -29,4 +29,3 @@ Build instructions (Cross compile for Windows on Linux): |
 
 Xfail:
     - Linux-32bit
-

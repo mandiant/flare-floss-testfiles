@@ -1,0 +1,35 @@
+Test Name: test-go-binary
+Test Purpose: demonstrate identification of go binary
+Decoding algorithm: none
+Input buffer location: global
+Output buffer location: global
+
+Decoded strings:
+    - Hello world!
+
+Source files:
+    - go-hello.go
+
+Output Files:
+    Linux:
+        32bit: bin/go-hello
+    Windows:
+        32bit: bin/go-hello.exe
+        64bit: bin/go-hello64.exe
+
+Build instructions (Windows): |
+    rm go-hello.exe
+    go build -o /Febin/go-hello.exe go-hello.go
+
+Build instructions (Linux): |
+    rm go-hello
+    go build -o bin/go-hello go-hello.go
+
+Build instructions (Cross compile for Windows on Linux): |
+    rm go-hello.exe
+    GOOS=windows GOARCH=386 go build -o bin/go-hello.exe go-hello.go
+
+
+Xfail:
+    - Linux-32bit
+

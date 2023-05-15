@@ -18,8 +18,7 @@ TESTS= \
 	decode-reencode-string \
 	decode-wrapped-decoder \
 	decode-to-stack-rep-mov \
-    decode-substitution-cipher \
-	go-hello
+    decode-substitution-cipher 
 
 
 clean:

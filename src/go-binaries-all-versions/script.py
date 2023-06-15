@@ -51,7 +51,7 @@ for version in go_versions.split():
     f.close()
 
     subprocess.call(["docker", "build", "--tag", "go-test", "."])
-    subprocess.call(["docker", "run", "-v", "/home/ark/go-test/:/var/opt", "go-test", "mv", "/go/bin/main.exe", "/var/opt/binaries/main{}.exe".format(version[2:])])
+    subprocess.call(["docker", "run", "-v", ".:/var/opt", "go-test", "mv", "/go/bin/main.exe", "/var/opt/binaries/main{}.exe".format(version[2:])])
 
 subprocess.call(["docker", "compose", "down"])
 print("Compose is DOWN")

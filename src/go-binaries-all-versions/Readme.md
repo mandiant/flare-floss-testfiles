@@ -10,3 +10,10 @@ Each ZIP archive corresponds to a specific architecture and contains the followi
 - `bin/versions_64.zip`: Zip file containing the compiled Go binaries for the amd64 architecture.
 - `main32.go`: Source code for the 386 architecture binaries.
 - `main64.go`: Source code for the amd64 architecture binaries.
+
+## Generating Go Binaries using Docker
+
+To automate the process of generating Go binaries for all versions from 1.11 to 1.20 using Docker, you can use the provided Python script. Follow the steps below:
+
+- Make sure Docker is installed and properly configured on your system.
+- Run the script using the following command: `python3 script.py`.

@@ -6,7 +6,7 @@ This repository contains two ZIP archives, each containing compiled Go binaries 
 
 Each ZIP archive corresponds to a specific architecture and contains the following files:
 
-- bin/versions_32.zip: Zip file containing the compiled Go binaries for the 386 architecture.
-- bin/versions_64.zip: Zip file containing the compiled Go binaries for the amd64 architecture.
-- main32.go: Source code for the 386 architecture binaries.
-- main64.go: Source code for the amd64 architecture binaries.
+- `bin/versions_32.zip`: Zip file containing the compiled Go binaries for the 386 architecture.
+- `bin/versions_64.zip`: Zip file containing the compiled Go binaries for the amd64 architecture.
+- `main32.go`: Source code for the 386 architecture binaries.
+- `main64.go`: Source code for the amd64 architecture binaries.

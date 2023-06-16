@@ -16,4 +16,6 @@ Each ZIP archive corresponds to a specific architecture and contains the followi
 To automate the process of generating Go binaries for all versions from 1.11 to 1.20 using Docker, you can use the provided Python script. Follow the steps below:
 
 - Make sure Docker is installed and properly configured on your system.
-- Run the script using the following command: `python3 script.py`.
+- Run the script using the following command: `python3 go_binary_generator.py`.
+
+The script will handle the setup, compilation, and generation of Go binaries for the specified minor versions. The resulting binaries will be saved in the `bin/` directory.

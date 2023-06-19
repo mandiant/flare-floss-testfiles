@@ -1,0 +1,32 @@
+Test Name: test-go-hello-world
+Test Purpose: Demonstrate the execution of a Go binary that prints "hello world"
+Decoding algorithm: N/A
+Input buffer location: stack
+Output buffer location: global
+
+Decoded strings:
+    - hello world
+
+Source files:
+    - go-hello.go
+    - go.mod
+
+Output Files:
+    Linux:
+        32bit: bin/go-hello
+    Windows:
+        32bit: bin/go-hello.exe
+        64bit: bin/go-hello64.exe
+
+Build instructions (Windows): |
+    go build -o bin/go-hello.exe go-hello.go
+
+Build instructions (Linux): |
+    go build -o bin/go-hello go-hello.go
+
+Build instructions (Cross compile for Windows on Linux): |
+    GOOS=windows GOARCH=amd64 go build -o bin/go-hello.exe go-hello.go
+
+Xfail:
+    - Linux-32bit
+

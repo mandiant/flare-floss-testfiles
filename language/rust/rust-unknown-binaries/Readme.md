@@ -1,6 +1,6 @@
 # Rust Binary Files for Multiple Architectures and Versions
 
-This repository contains binary files for Rust programming language compiled for various architectures and versions. Please note that the source code for these binaries is not available and their origin is unknown. Exercise caution when using binaries from untrusted sources.
+This repository contains binary files for Rust programming language compiled for various architectures and versions. The binaries included here have been sourced from VirusTotal. Please note that the source code for these binaries is not available and their origin is unknown. Exercise caution when using binaries from untrusted sources.
 
 ## Contents
 

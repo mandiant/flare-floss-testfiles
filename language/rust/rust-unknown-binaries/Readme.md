@@ -2,15 +2,61 @@
 
 This repository contains binary files for Rust programming language compiled for various architectures and versions. The binaries included here have been sourced from VirusTotal. Please note that the source code for these binaries is not available and their origin is unknown. Exercise caution when using binaries from untrusted sources.
 
-## Contents
 
-The bin/ folder includes the following files:
+## File Organization
 
-- 386_rust1.59.0: Rust binary compiled for Windows 32-bit (386) architecture, version 1.59.0.
-- amd64_rust1.59.0: Rust binary compiled for Windows 64-bit (amd64) architecture, version 1.59.0.
-- 386_rust1.65.0: Rust binary compiled for Windows 32-bit (386) architecture, version 1.65.0.
-- amd64_rust1.65.0: Rust binary compiled for Windows 64-bit (amd64) architecture, version 1.65.0.
-- 386_rust1.69.0: Rust binary compiled for Windows 32-bit (386) architecture, version 1.69.0.0.
-- amd64_rust1.69.0: Rust binary compiled for Windows 64-bit (amd64) architecture, version 1.69.0.
+The project files have been organized following a structured approach to enhance clarity and maintainability. Each file is named after its SHA256 hash, and they are placed within a directory structure that denotes the compiler version and architecture. Files are named using their SHA256 hash
 
+### Directory Structure
+
+Files are organized under the following directory structure:
+
+rust-unknown-binaries/ <br>
+├── bin/ <br>
+│ ├── 1.69.0/ <br>
+│ │ ├── amd64/  <br>
+│ │ │ ├── \<SHA256>.exe  <br>
+│ │ │ ├── ...   <br>
+│ │ ├── i386/   <br>
+│ │ │ ├── \<SHA256>.exe  <br>
+│ │ │ ├── ...   <br>
+│ ├── ...   <br>
+
+### Contents
+The bin/ folder consists of the following binaires:
+
+<table>
+<thead>
+<tr>
+<td>Architecture</td>
+<td>Version</td>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.59.0</td>
+<td>i386</td>
+</tr>
+<tr>
+<td>1.64.0</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>1.65.0</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>1.68.1</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>1.69.0</td>
+<td>amd64</td>
+</tr>
+<tr>
+<td>1.69.0</td>
+<td>i386</td>
+</tr>
+</tbody>
+</table>
 

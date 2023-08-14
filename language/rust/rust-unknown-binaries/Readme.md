@@ -22,41 +22,4 @@ rust-unknown-binaries/ <br>
 │ │ │ ├── ...   <br>
 │ ├── ...   <br>
 
-### Contents
-The bin/ folder consists of the following binaires:
-
-<table>
-<thead>
-<tr>
-<td>Architecture</td>
-<td>Version</td>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1.59.0</td>
-<td>i386</td>
-</tr>
-<tr>
-<td>1.64.0</td>
-<td>amd64</td>
-</tr>
-<tr>
-<td>1.65.0</td>
-<td>amd64</td>
-</tr>
-<tr>
-<td>1.68.1</td>
-<td>amd64</td>
-</tr>
-<tr>
-<td>1.69.0</td>
-<td>amd64</td>
-</tr>
-<tr>
-<td>1.69.0</td>
-<td>i386</td>
-</tr>
-</tbody>
-</table>
 

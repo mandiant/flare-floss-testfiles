@@ -26,5 +26,3 @@ Build instructions (Linux): |
 Build instructions (Cross compile for Windows on Linux): |
     i686-w64-mingw32-clang test-decode-to-stack-rep-mov.c -o bin/test-decode-to-stack-rep-mov.exe
 
-Xfail:
-    - Linux-32bit

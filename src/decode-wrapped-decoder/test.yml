@@ -31,5 +31,4 @@ Build instructions (Cross compile for Windows on Linux): |
 
 Xfail:
     - all
-    - Linux-32bit
 

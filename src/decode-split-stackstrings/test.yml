@@ -27,6 +27,4 @@ Build instructions (Linux): |
 Build instructions (Cross compile for Windows on Linux): |
     i686-w64-mingw32-clang++ test-decode-split-stackstrings.c -o bin/test-decode-split-stackstrings.exe
 
-Xfail:
-    - Linux-32bit
 

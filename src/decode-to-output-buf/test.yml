@@ -26,6 +26,4 @@ Build instructions (Linux): |
 Build instructions (Cross compile for Windows on Linux): |
     i686-w64-mingw32-clang test-decode-to-output-buf.c -o bin/test-decode-to-output-buf.exe
 
-Xfail:
-    - Linux-32bit
 

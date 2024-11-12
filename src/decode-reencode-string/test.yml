@@ -29,5 +29,3 @@ Build instructions (Cross compile for Windows on Linux): |
     rm test-decode-reencode-string.exe
     i686-w64-mingw32-clang test-decode-reencode-string.c -o bin/test-decode-reencode-string.exe
 
-Xfail:
-    - Linux-32bit

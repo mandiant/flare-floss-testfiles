@@ -30,6 +30,3 @@ Build instructions (Cross compile for Windows on Linux): |
     eg. rm test-decode-string-by-index.exe
     eg. i686-w64-mingw32-clang test-decode-string-by-index.c -o bin/test-decode-string-by-index.exe
 
-Xfail:
-    - Linux-32bit
-

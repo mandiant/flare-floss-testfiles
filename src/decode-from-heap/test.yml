@@ -26,5 +26,3 @@ Build instructions (Linux): |
 Build instructions (Cross compile for Windows on Linux): |
       i686-w64-mingw32-clang test-decode-from-heap.c -o bin/test-decode-from-heap.exe
 
-Xfail:
-    - Linux-32bit

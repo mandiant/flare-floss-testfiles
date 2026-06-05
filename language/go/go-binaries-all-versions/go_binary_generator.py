@@ -27,11 +27,9 @@ go_versions = """
 
 f = open("docker-compose.yml", "w")
 
-f.write(
-    """services:
+f.write("""services:
   app:
-    build: ."""
-)
+    build: .""")
 
 f.close()
 
@@ -46,30 +44,22 @@ for arch in architecture.keys():
 
         f = open("Dockerfile", "w")
 
-        f.write(
-            """# syntax=docker/dockerfile:1
+        f.write("""# syntax=docker/dockerfile:1
 FROM golang:{}
 
 WORKDIR /app
 COPY go.mod ./
 RUN go mod download
 COPY *.go ./
-RUN GOOS=windows GOARCH={} go install main{}.go""".format(
-                version, arch, architecture[arch]
-            )
-        )
+RUN GOOS=windows GOARCH={} go install main{}.go""".format(version, arch, architecture[arch]))
         f.close()
 
         f = open("go.mod", "w")
 
-        f.write(
-            """module go-test
+        f.write("""module go-test
 
 go {}
-        """.format(
-                version
-            )
-        )
+        """.format(version))
 
         f.close()
 

@@ -25,11 +25,9 @@ rust_versions = """
 
 f = open("docker-compose.yml", "w")
 
-f.write(
-    """services:
+f.write("""services:
   app:
-    build: ."""
-)
+    build: .""")
 
 f.close()
 
@@ -46,8 +44,7 @@ for arch in architecture.keys():
 
         target = architecture[arch]
 
-        f.write(
-            """# syntax=docker/dockerfile:1
+        f.write("""# syntax=docker/dockerfile:1
 FROM rust:{}
 ENV USER root
 RUN cargo new known_binary
@@ -58,10 +55,7 @@ RUN rustup target add {}
 RUN rustup update
 RUN cargo build --release --target {}
 
-""".format(
-                version, target, target
-            )
-        )
+""".format(version, target, target))
         f.close()
 
         subprocess.call(["docker", "build", "--tag", "rust-test", "."])

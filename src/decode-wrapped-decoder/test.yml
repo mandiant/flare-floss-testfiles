@@ -29,6 +29,4 @@ Build instructions (Cross compile for Windows on Linux): |
     rm test-decode-wrapped-decoder.exe
     i686-w64-mingw32-clang test-decode-wrapped-decoder.c -o bin/test-decode-wrapped-decoder.exe
 
-Xfail:
-    - all
 

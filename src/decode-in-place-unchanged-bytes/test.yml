@@ -1,0 +1,31 @@
+Test Name: test-decode-in-place-unchanged-bytes
+Test Purpose: Demonstrate extraction of a string decoded in place, where some of its characters don't change.
+Decoding algorithm: substitution cipher
+Input buffer location: global
+Output buffer location: global
+
+Decoded strings:
+    - secret password
+
+Source files:
+    - test-decode-in-place-unchanged-bytes.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-in-place-unchanged-bytes
+    Windows:
+        32bit: bin/test-decode-in-place-unchanged-bytes.exe
+        64bit: bin/test-decode-in-place-unchanged-bytes64.exe
+
+Build instructions (Windows): |
+    cl.exe test-decode-in-place-unchanged-bytes.c /Febin/test-decode-in-place-unchanged-bytes.exe
+
+Build instructions (Linux): |
+    clang test-decode-in-place-unchanged-bytes.c -o bin/test-decode-in-place-unchanged-bytes
+
+Build instructions (Cross compile for Windows on Linux): |
+    i686-w64-mingw32-clang test-decode-in-place-unchanged-bytes.c -o bin/test-decode-in-place-unchanged-bytes.exe
+    x86_64-w64-mingw32-clang test-decode-in-place-unchanged-bytes.c -o bin/test-decode-in-place-unchanged-bytes64.exe
+
+Xfail:
+    - all

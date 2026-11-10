@@ -1,0 +1,11 @@
+[package]
+name = "test-rust-litcrypt"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+litcrypt = "0.4"
+
+[profile.release]
+opt-level = 3
+strip = true

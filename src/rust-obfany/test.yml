@@ -1,0 +1,37 @@
+Test Name: test-rust-obfany
+Test Purpose: "Demonstrate extraction of strings encrypted with the obfany crate's obfstr! and obfwide! (UTF-16) macros: xor with a XorShift keystream."
+Decoding algorithm: XorShift keystream xor
+Input buffer location: stack
+Output buffer location: stack
+
+Decoded strings:
+    - "canary::alpha::7f3c-config-endpoint"
+    - "canary::bravo::build-id-20261018"
+    - "canary::charlie::/opt/app/resources/data.bin"
+    - "canary::delta::feature-flag-telemetry-off"
+    - "canary::echo::schema-version-4"
+
+Source files:
+    - src/main.rs
+    - Cargo.toml
+    - Cargo.lock
+
+Output Files:
+    Linux:
+        32bit: bin/test-rust-obfany
+    Windows:
+        32bit: bin/test-rust-obfany.exe
+        64bit: bin/test-rust-obfany64.exe
+
+Build instructions (Windows): |
+    cargo build --release --locked --target i686-pc-windows-gnu
+
+Build instructions (Linux): |
+    cargo build --release --locked --target x86_64-unknown-linux-gnu
+
+Build instructions (Cross compile for Windows on Linux): |
+    cargo build --release --locked --target i686-pc-windows-gnu
+    cargo build --release --locked --target x86_64-pc-windows-gnu
+
+Xfail:
+    - all

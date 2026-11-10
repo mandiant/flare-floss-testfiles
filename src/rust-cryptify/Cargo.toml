@@ -1,0 +1,11 @@
+[package]
+name = "test-rust-cryptify"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+cryptify = "3"
+
+[profile.release]
+opt-level = 3
+strip = true

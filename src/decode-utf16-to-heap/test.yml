@@ -1,0 +1,31 @@
+Test Name: test-decode-utf16-to-heap
+Test Purpose: Demonstrate extraction of a UTF-16 string decoded into zeroed memory, where the high byte of each character doesn't change.
+Decoding algorithm: single byte xor of each UTF-16 character
+Input buffer location: global
+Output buffer location: heap
+
+Decoded strings:
+    - hello wide world
+
+Source files:
+    - test-decode-utf16-to-heap.c
+
+Output Files:
+    Linux:
+        32bit: bin/test-decode-utf16-to-heap
+    Windows:
+        32bit: bin/test-decode-utf16-to-heap.exe
+        64bit: bin/test-decode-utf16-to-heap64.exe
+
+Build instructions (Windows): |
+    cl.exe test-decode-utf16-to-heap.c /Febin/test-decode-utf16-to-heap.exe
+
+Build instructions (Linux): |
+    clang test-decode-utf16-to-heap.c -o bin/test-decode-utf16-to-heap
+
+Build instructions (Cross compile for Windows on Linux): |
+    i686-w64-mingw32-clang test-decode-utf16-to-heap.c -o bin/test-decode-utf16-to-heap.exe
+    x86_64-w64-mingw32-clang test-decode-utf16-to-heap.c -o bin/test-decode-utf16-to-heap64.exe
+
+Xfail:
+    - all

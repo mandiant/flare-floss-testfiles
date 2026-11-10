@@ -1,0 +1,37 @@
+Test Name: test-rust-muddy
+Test Purpose: "Demonstrate extraction of strings encrypted with the muddy crate's muddy! macro: ChaCha20-Poly1305."
+Decoding algorithm: ChaCha20-Poly1305
+Input buffer location: global
+Output buffer location: heap
+
+Decoded strings:
+    - "canary::alpha::7f3c-config-endpoint"
+    - "canary::bravo::build-id-20261018"
+    - "canary::charlie::/opt/app/resources/data.bin"
+    - "canary::delta::feature-flag-telemetry-off"
+    - "canary::echo::schema-version-4"
+
+Source files:
+    - src/main.rs
+    - Cargo.toml
+    - Cargo.lock
+
+Output Files:
+    Linux:
+        32bit: bin/test-rust-muddy
+    Windows:
+        32bit: bin/test-rust-muddy.exe
+        64bit: bin/test-rust-muddy64.exe
+
+Build instructions (Windows): |
+    cargo build --release --locked --target i686-pc-windows-gnu
+
+Build instructions (Linux): |
+    cargo build --release --locked --target x86_64-unknown-linux-gnu
+
+Build instructions (Cross compile for Windows on Linux): |
+    cargo build --release --locked --target i686-pc-windows-gnu
+    cargo build --release --locked --target x86_64-pc-windows-gnu
+
+Xfail:
+    - all

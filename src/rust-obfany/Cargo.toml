@@ -1,0 +1,11 @@
+[package]
+name = "test-rust-obfany"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+obfany = "0.1"
+
+[profile.release]
+opt-level = 3
+strip = true

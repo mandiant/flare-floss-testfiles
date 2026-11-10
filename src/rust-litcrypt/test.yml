@@ -1,0 +1,37 @@
+Test Name: test-rust-litcrypt
+Test Purpose: "Demonstrate extraction of strings encrypted with the litcrypt crate's lc! macro: xor with a key embedded at build time, decoded by a shared function."
+Decoding algorithm: litcrypt (xor)
+Input buffer location: global
+Output buffer location: heap
+
+Decoded strings:
+    - "canary::alpha::7f3c-config-endpoint"
+    - "canary::bravo::build-id-20261018"
+    - "canary::charlie::/opt/app/resources/data.bin"
+    - "canary::delta::feature-flag-telemetry-off"
+    - "canary::echo::schema-version-4"
+
+Source files:
+    - src/main.rs
+    - Cargo.toml
+    - Cargo.lock
+
+Output Files:
+    Linux:
+        32bit: bin/test-rust-litcrypt
+    Windows:
+        32bit: bin/test-rust-litcrypt.exe
+        64bit: bin/test-rust-litcrypt64.exe
+
+Build instructions (Windows): |
+    LITCRYPT_ENCRYPT_KEY=benchmark-fixed-key-do-not-reuse cargo build --release --locked --target i686-pc-windows-gnu
+
+Build instructions (Linux): |
+    LITCRYPT_ENCRYPT_KEY=benchmark-fixed-key-do-not-reuse cargo build --release --locked --target x86_64-unknown-linux-gnu
+
+Build instructions (Cross compile for Windows on Linux): |
+    LITCRYPT_ENCRYPT_KEY=benchmark-fixed-key-do-not-reuse cargo build --release --locked --target i686-pc-windows-gnu
+    LITCRYPT_ENCRYPT_KEY=benchmark-fixed-key-do-not-reuse cargo build --release --locked --target x86_64-pc-windows-gnu
+
+Xfail:
+    - all

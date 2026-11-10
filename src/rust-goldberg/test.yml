@@ -1,0 +1,34 @@
+Test Name: test-rust-goldberg
+Test Purpose: "Demonstrate extraction of strings encrypted with the goldberg crate's goldberg_string! macro, next to its control-flow flattening (goldberg_stmts!)."
+Decoding algorithm: goldberg (xor)
+Input buffer location: global
+Output buffer location: heap
+
+Decoded strings:
+    - "C:\\ProgramData\\Helios\\agent-state.db"
+    - "https://cdn.helios-sync.example/v2/push"
+
+Source files:
+    - src/main.rs
+    - Cargo.toml
+    - Cargo.lock
+
+Output Files:
+    Linux:
+        32bit: bin/test-rust-goldberg
+    Windows:
+        32bit: bin/test-rust-goldberg.exe
+        64bit: bin/test-rust-goldberg64.exe
+
+Build instructions (Windows): |
+    cargo build --release --locked --target i686-pc-windows-gnu
+
+Build instructions (Linux): |
+    cargo build --release --locked --target x86_64-unknown-linux-gnu
+
+Build instructions (Cross compile for Windows on Linux): |
+    cargo build --release --locked --target i686-pc-windows-gnu
+    cargo build --release --locked --target x86_64-pc-windows-gnu
+
+Xfail:
+    - all

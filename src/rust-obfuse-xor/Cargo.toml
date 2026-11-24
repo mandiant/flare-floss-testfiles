@@ -1,0 +1,11 @@
+[package]
+name = "test-rust-obfuse-xor"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+obfuse = { version = "1", default-features = false, features = ["xor"] }
+
+[profile.release]
+opt-level = 3
+strip = true
